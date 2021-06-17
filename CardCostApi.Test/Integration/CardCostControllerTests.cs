@@ -42,10 +42,6 @@ namespace CardCostApi.Test.Integration
         [Fact]
         public async Task GetCardCost_ValidRequest_200OK()
         {
-            var d = Names.Aris;
-            var b = d.GetAttributeOfType<DescriptionAttribute>().Description;
-
-
             // act, arrange
             var sut = await _httpClient.GetAsync("/api/card-cost/424242");
             sut.EnsureSuccessStatusCode();
